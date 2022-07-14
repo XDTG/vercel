@@ -62,7 +62,7 @@ func digServices() {
 
 func printServices() {
 	readResolv()
-	//digServices()
+	digServices()
 }
 
 func coreMetrics(dnsIp string) {
@@ -94,7 +94,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	printServices()
 
-	dnsIp := ""
+	dnsIp := "169.254.78.1"
 	coreMetrics(dnsIp)
 
 	fmt.Fprintf(w, result)
